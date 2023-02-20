@@ -1,0 +1,11 @@
+use("platzi_store");
+
+// # Deletion of an element
+// db.products.deleteOne({ _id: 1 });
+
+// # Removing an item based on a filter
+// db.products.deleteMany({
+//     price: 100
+// });
+
+db.products.drop();
