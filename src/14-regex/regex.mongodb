@@ -1,0 +1,38 @@
+use("platzi_store");
+
+// db.inventory.find({
+//     "item.description": "Single line description."
+// });
+
+// db.inventory.find({
+//     "item.description": {
+//         $regex: /line/
+//     }
+// });
+
+// db.inventory.find({
+//     "item.description": {
+//         $regex: /LINE/i
+//     }
+// });
+
+// # Find the word at the end
+// db.inventory.find({
+//     "item.description": {
+//         $regex: /line$/i
+//     }
+// });
+
+// # Find the word at the start
+// db.inventory.find({
+//     "item.description": {
+//         $regex: /^single/i
+//     }
+// });
+
+// # Find the word at the beginning of the line with the same description
+db.inventory.find({
+    "item.description": {
+        $regex: /^s/im
+    }
+});
